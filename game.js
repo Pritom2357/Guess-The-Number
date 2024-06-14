@@ -29,6 +29,7 @@ function checkBtn(){
     var giveBtn = document.getElementById("giveBtn");
     giveBtn.addEventListener("click", function(){
         alert("The correct number is: " + mainNum);
+        mainNum = Math.floor((Math.random() * 1000) + 1);
     })
     var btn = document.getElementById("checkBtn");
     userVal = document.getElementById("inputVal");
