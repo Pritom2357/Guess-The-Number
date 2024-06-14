@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Word</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <p class="w1">Enter Your Name </p>
+            <input class="w1 in" type="text" id="name">
+            <button class="w1" id="button" onclick="openWith()">Enter</button>
+        </form>
+        <hr>
+        <div class="player">
+            <h1>::How to play::</h1>
+            <p><h2>..Guess the Number..</h2><br>
+            <h4>1. Please enter your name and press "Enter". Then you will see a pop-up, press "ok".</h4><br>
+            <h4>2. In the next page, you will be given two fields: "Input" and "Result". Enter your guessed number in the "input" field and press "Check" button.</h4><br>
+            <h4>3. If your guessed number is correct, you will see a pop-up, Congrats!! You did it!!!</h4><br>
+            <h4>4. Otherwise, you will see instructions in the "Result" field. If you find it hard, you can always give up. To replay, just reload...</h4><br>
+            </p>
+        </div>
+    </div>
+    <script>
+        var outputValue;
+        const inputElement = document.getElementById('name');
+        inputElement.addEventListener('input', function() {
+        const inputValue = inputElement.value;
+        outputValue = "Hi! " + inputValue+ ", have a great match!!!"
+        });
+        function openWith()
+        {
+            alert(outputValue);
+            window.open("game.html");
+        }
+        var name = document.getElementById("name").value;
+    </script>
+</body>
+</html>
